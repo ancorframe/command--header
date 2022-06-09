@@ -5,59 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@400;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header container">
-      <div class="header_block">
-        <a href="index.html" class="logo link">logo</a>
-        <div class="flex">
-          <button type="button" class="menu-button" data-modal-open>
-            <svg width="20" height="12">
-              <use
-                class="menu-button__icon-menu"
-                href="./images/icons.svg#icon-Burger"
-              ></use>
-            </svg>
-          </button>
-        </div>
-
-        <div class="menu-container is-hidden" data-modal>
-          <button type="button" class="close-button" data-modal-close>
-            <svg width="14" height="14">
-              <use
-                class="menu-button__icon-close"
-                href="./images/icons.svg#icon-close-4"
-              ></use>
-            </svg>
-          </button>
-          <button type="button" class="buy-button buy-button__menu">
-            Buy now
-          </button>
-          <ul class="nav list">
-            <li class="nav_item"><a href="" class="nav_link link">Home</a></li>
-            <li class="nav_item">
-              <a href="" class="nav_link link">About us</a>
-            </li>
-            <li class="nav_item">
-              <a href="" class="nav_link link">How it’s made?</a>
-            </li>
-            <li class="nav_item">
-              <a href="" class="nav_link link">Our products</a>
-            </li>
-            <li class="nav_item">
-              <a href="" class="nav_link link">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <button type="button" class="buy-button buy-button__hidden">
-          Buy now
+      <a href="index.html" class="logo link">
+        <picture>
+          <img
+            srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+            src="./images/logo.png 1x"
+            alt="image"
+            class="logo_img"
+            loading="lazy"
+          />
+        </picture>
+      </a>
+      <div class="flex">
+        <button type="button" class="menu-button" data-menu-open>
+          <svg width="20" height="12">
+            <use
+              class="menu-button__icon-menu"
+              href="./images/icons.svg#icon-Burger"
+            ></use>
+          </svg>
         </button>
       </div>
+      <div class="menu-container is-hidden" data-menu>
+        <button type="button" class="close-button" data-menu-close>
+          <svg width="14" height="14">
+            <use
+              class="menu-button__icon-close"
+              href="./images/icons.svg#icon-close-4"
+            ></use>
+          </svg>
+        </button>
+        <button type="button" class="buy-button buy-button__menu">
+          <div class="buy-button__flex">
+            <span class="buy-button__text">Buy now</span
+            ><svg class="buy-button_icon">
+              <use href="./images/icons.svg#icon-Vector-1"></use>
+            </svg>
+          </div>
+        </button>
+        <ul class="nav list" data-anchor-close>
+          <li class="nav_item"><a href="#Hero" class="nav_link link" >Home</a></li>
+          <li class="nav_item">
+            <a href="#About us" class="nav_link link" >About us</a>
+          </li>
+          <li class="nav_item">
+            <a href="#How it’s made?" class="nav_link link" >How it’s made?</a>
+          </li>
+          <li class="nav_item">
+            <a href="#Our products" class="nav_link link" >Our products</a>
+          </li>
+          <li class="nav_item">
+            <a href="#Contact" class="nav_link link" >Contact</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="buy-button buy-button__header">
+        <div class="buy-button__flex buy-button__flex_header">
+          <span class="buy-button__text buy-button__text_header">Buy now</span
+          ><svg class="buy-button_icon">
+            <use href="./images/icons.svg#icon-Vector-1"></use>
+          </svg>
+        </div>
+      </button>
     </header>
     <main>
-      <div class="hero container"></div>
+      <div id="Hero" class="hero container"></div>
+      <div id="About us" class="About"></div>
+      <div id="How it’s made?" class="How"></div>
+      <div id="Our products" class="Our"></div>
     </main>
 
     <script src="./js/modal.js"></script>

@@ -3,8 +3,6 @@
   z-index: 1;
   width: 100%;
   max-width: 100%;
-}
-.header_block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,11 +14,23 @@
     margin-top: 37px;
   }
 }
+// .header_block {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-top: 8px;
+//   @media screen and (min-width: 768px) {
+//     margin-top: 32px;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     margin-top: 37px;
+//   }
+// }
 .logo {
   display: block;
   width: 199px;
   height: 50px;
-  background-color: aqua;
+  cursor: pointer;
 }
 
 .menu-button {
@@ -72,6 +82,73 @@
   border-radius: 22px;
   background: #ffffff;
   border: 0;
+  cursor: pointer;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #d41443;
+  &:hover,
+  &:focus {
+    background: #ecebeb;
+  }
+}
+
+.buy-button__flex {
+  width: 112px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: baseline;
+  @media screen and(min-width: 768px) {
+    width: 99px;
+  }
+}
+
+.buy-button__flex_header{
+  width: 85px;
+}
+
+.buy-button__text {
+  display: block;
+  width: 90px;
+  @media screen and(min-width: 768px) {
+    width: 80px;
+  }
+}
+
+.buy-button__text_header{
+width: 70px;
+}
+
+.buy-button_icon {
+  width: 8px;
+  height: 10px;
+}
+
+.buy-button__menu {
+  margin: 0 auto;
+  width: 209px;
+  height: 44px;
+  margin-top: 60px;
+  margin-bottom: 19px;
+  @media screen and(min-width: 768px) {
+    width: 186px;
+  }
+
+  @media screen and (min-width: 1199px) {
+    display: none;
+  }
+}
+
+.buy-button__header {
+  width: 160px;
+  height: 44px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .nav {
@@ -81,38 +158,28 @@
 }
 
 .nav_item {
-    @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     height: 42px;
-  border-bottom: 1px solid #e18298;
-  &:first-child {
-    border-top: 1px solid #e18298;
+    border-bottom: 1px solid #e18298;
+    &:first-child {
+      border-top: 1px solid #e18298;
+    }
   }
-  }
-  
+  @media screen and (min-width: 1200px) {
+&:not(:last-child){
+  margin-right: 5px;
 }
 
-.buy-button__menu {
-  margin: 0 auto;
-  width: 209px;
-  height: 44px;
-  margin-top: 60px;
-  margin-bottom: 19px;
-
-  @media screen and (min-width: 1199px) {
-    display: none;
   }
 }
 
-.buy-button__hidden {
-  width: 160px;
-  height: 44px;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
 .nav_link {
   display: block;
   padding: 13px 20px 11px 20px;
+    @media screen and (min-width: 1200px) {
+padding: 15px;
+
+  }
 }
 
 .menu-container {
@@ -121,11 +188,14 @@
     top: 0;
     right: 0;
     transform: translateX(0);
-    width: 250px;
+    width: 100%;
     height: 100vh;
     background-color: #e17992;
     @include transition((transform));
 
+    @media screen and(min-width: 480px) {
+      width: 254px;
+    }
   }
   @media screen and (min-width: 1200px) {
     position: relative;
@@ -141,7 +211,7 @@
 }
 
 .hero {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -155,4 +225,24 @@
     // width: 1200px;
     height: 664px;
   }
+}
+
+
+.About{
+width: 100%;
+height: 664px;
+background-color: teal;
+
+}
+.How{
+  width: 100%;
+height: 664px;
+background-color: tan;
+
+}
+.Our{
+    width: 100%;
+height: 664px;
+background-color: thistle;
+
 }

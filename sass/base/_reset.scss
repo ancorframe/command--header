@@ -7,7 +7,7 @@ body {
   background-color: var(--body-bgrd-color);
   margin: 0;
   padding: 0;
-  overflow: hidden;
+
 }
 
 p,
@@ -29,6 +29,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 .container {
   padding-left: 20px;
@@ -40,8 +43,8 @@ img {
   }
   @media screen and (min-width: 768px) {
     width: 768px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -74,5 +77,8 @@ img {
 }
 
 .no-scroll {
+    @media screen and (max-width: 767px) {
   overflow: hidden;
+  }
+
 }
