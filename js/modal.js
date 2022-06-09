@@ -10,6 +10,7 @@
   refs.openMenuBtn.addEventListener("click", toggleModal);
   refs.closeMenuBtn.addEventListener("click", toggleModal);
   refs.closeAnchorLink.addEventListener("click", toggleModal);
+  
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
     refs.body.classList.toggle("no-scroll");
